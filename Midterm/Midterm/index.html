@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brodie Roberts — student Project showcasing web projects including a Valks calendar converter with holiday lookup and responsive design.">
+    <meta name="keywords" content="Brodie Roberts, CIS185, Project, web development, HTML, CSS, JavaScript, Valks calendar, responsive">
+    <meta name="author" content="Brodie Roberts">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#00ffff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Brodie Roberts — CIS185 Project">
+    <meta property="og:description" content="Student Project showcasing web projects including a Valks calendar converter.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brodie Roberts — CIS185 Project">
+    <meta name="twitter:description" content="Student Project showcasing web projects including a Valks calendar converter.">
+    <meta name="twitter:image" content="images/hero.jpg">
+    <title>Brodie Roberts — CIS185 Project (Week 4 Bootstrap Responsive)</title>
+    <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.0772ca241634c7b01d851dbba01123ef?rik=JIDiotzXJVNrsQ&pid=ImgRaw&r=0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="global-gradient">
+    <header class="container mt-3 mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent border border-white rounded-3 shadow-sm heavy-outline">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold brand-dark" href="#">Brodie Roberts</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="design-plan.html">Design Plan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="text-center text-white mt-2">
+            <span class="fst-italic">Student • Aspiring Web Developer</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="hero" class="row align-items-center bg-white rounded-4 shadow-lg p-4 mb-4">
+            <div class="col-md-8 col-12 mb-3 mb-md-0">
+                <h2>Hello — I'm Brodie</h2>
+                <p>I'm learning web development in CIS185. I enjoy building small projects and experimenting with HTML, CSS and JavaScript.</p>
+            </div>
+            <div class="col-md-4 col-12 text-center">
+                <img src="https://images6.alphacoders.com/676/676694.jpg" alt="Logo or avatar for Brodie" class="img-fluid rounded-circle border border-3 border-light header-avatar">
+            </div>
+        </section>
+
+        <section id="about" class="bg-white rounded-4 shadow-sm p-4 mb-4">
+            <h2>About</h2>
+            <p>I build practical, accessible web projects that demonstrate real skills an employer needs: clean semantic HTML, responsive layouts, and interactive JavaScript.</p>
+            <p>This site showcases a working thirteenth month calendar (Valks Calendar) converter with holiday lookup, a responsive portfolio layout, a separate contact form, and progressive visual polish (canvas-based snow, optimized styles, and mobile-first breakpoints). Each feature was implemented with attention to accessibility, performance, and maintainability.</p>
+            <p>Why hire me based on this site?</p>
+            <ul>
+                <li><strong>Hands-on coding:</strong> I can build frontend features end-to-end using HTML, CSS and vanilla JavaScript.</li>
+                <li><strong>Problem solving:</strong> The calendar converter demonstrates algorithmic thinking and integrating third-party APIs.</li>
+                <li><strong>Responsive & accessible:</strong> Pages are mobile-friendly and include semantic elements and labeled form controls.</li>
+                <li><strong>Polish & UX awareness:</strong> Visual details (layout, hover states, and progressive enhancement) show care for user experience.</li>
+                <li><strong>Organized & ready to extend:</strong> Files are structured into `css/`, `js/`, and `images/` to support team workflows.</li>
+            </ul>
+            <p>If you'd like to see the code behind any feature or walk through the implementation, I'm happy to explain or extend the project further.</p>
+        </section>
+
+        <section id="projects" class="mb-4">
+            <h2>Projects</h2>
+            <div class="row g-3">
+                <div class="col-md-4 col-12">
+                    <a href="valks_calendar.html" class="text-decoration-none" title="Open Valks Calendar">
+                        <div class="card h-100 project-card">
+                            <img src="https://media.gettyimages.com/id/1004567278/photo/calendar.jpg?s=1024x1024&w=gi&k=20&c=Fd49sAkgsnIXjcuhmKHwuVBWqL559WL2jHmqhbbE3DU=" class="card-img-top" alt="Screenshot of Project One">
+                            <div class="card-body">
+                                <h5 class="card-title">Valks Calendar — Converter</h5>
+                                <p class="card-text">Interactive converter that maps Gregorian dates to the custom Valks calendar. Includes holiday lookup (Nager.Date) and responsive design.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="col-md-4 col-12">
+                    <a href="Browser Crasher.html" class="text-decoration-none" title="OOpen Browser Crasher">
+                        <div class="card h-100 project-card">
+                            <img src="https://thumbs.dreamstime.com/b/tv-glitch-psychedelic-noise-background-old-vhs-screen-error-digital-pixel-noise-abstract-design-computer-bug-television-signal-tv-228965490.jpg" class="card-img-top" alt="Screenshot of Project Two">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Two — Browser Crasher</h5>
+                            <p class="card-text">Warning this is meant to overload your browser.</p>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card h-100">
+                        <img src="https://images.pexels.com/photos/291732/pexels-photo-291732.jpeg?cs=srgb&dl=adventure-cold-daylight-291732.jpg&fm=jpg" class="card-img-top" alt="Screenshot of Project Three">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Three — Not Ready</h5>
+                            <p class="card-text text-muted">Work in progress — coming soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container text-center text-white py-3">
+        <p>&copy; 2025 Brodie Roberts</p>
+    </footer>
+
+    <script src="js/snow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
