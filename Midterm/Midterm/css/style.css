@@ -1,0 +1,117 @@
+/* Copied from Week 3, bootstrap version */
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.navbar, .site-header, .navbar-brand {
+    font-family: 'Times New Roman', Times, serif;
+}
+h1, h2, h3, h4, h5, h6, .brand h1 {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.tagline, .fst-italic {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* Site-wide gradient class (used by calendar page) */
+.global-gradient {
+    background: linear-gradient(135deg, #00ffff 0%, #ff00ff 100%);
+    min-height: 100vh;
+}
+
+/* Canvas-based snow (canvas element sits above gradient but below UI) */
+.snow-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* sits above gradient but below site content */
+}
+
+/* ensure page content sits above the snow canvas */
+.site-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header / branding helpers moved from inline styles */
+.navbar.heavy-outline {
+    box-shadow: 0 0 0 5px #fff !important;
+}
+.navbar .navbar-brand.brand-dark {
+    color: #222 !important;
+}
+.header-avatar {
+    max-width: 160px !important;
+}
+
+/* Small page-specific tweaks (moved from inline <style> in calendar page) */
+.result-card { min-height: 120px; }
+.monospace { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; }
+
+/* Project card hover effect: slightly larger and lift on hover/focus */
+.project-card {
+    transition: transform 240ms ease, box-shadow 240ms ease;
+    will-change: transform;
+}
+.project-card:hover,
+.project-card:focus {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+.project-card:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Header nav hover: white rounded box behind links (excluding button-styled links) */
+.navbar .nav-link:not(.btn) {
+    position: relative;
+    padding: 0.35rem 0.7rem;
+    border-radius: 0.55rem;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+.navbar .nav-link:not(.btn):hover,
+.navbar .nav-link:not(.btn):focus,
+.navbar .nav-link:not(.btn):focus-visible {
+    background: rgba(255,255,255,0.95);
+    color: #222 !important;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    text-decoration: none;
+}
+.navbar .nav-link:not(.btn):focus-visible {
+    outline: 3px solid rgba(0,0,0,0.06);
+    outline-offset: 2px;
+}
+
+/* Responsive Google Map embed styles */
+.map-section { margin-top: 1rem; }
+.map-container { width: 100%; height: 400px; max-width: 100%; border-radius: 8px; overflow: hidden; }
+.map-container iframe { border: 0; width: 100%; height: 100%; display: block; }
+
+@media (max-width: 576px) {
+    .map-container { height: 260px; }
+}
+
+/* Wireframes / image placeholder styles for Design Plan page */
+.img-figure { margin: 0; }
+.img-spot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.95));
+    border: 2px dashed rgba(0,0,0,0.12);
+    color: rgba(0,0,0,0.6);
+    font-weight: 600;
+    border-radius: 8px;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .img-spot { min-height: 160px; font-size: 0.95rem; }
+}
+
+/* Ensure images inside the spots scale and crop nicely */
+.img-spot img { width: 100%; height: 100%; object-fit: cover; display: block; }

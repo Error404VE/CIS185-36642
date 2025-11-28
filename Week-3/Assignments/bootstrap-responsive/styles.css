@@ -1,0 +1,13 @@
+
+body {
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.navbar, .site-header, .navbar-brand {
+	font-family: 'Times New Roman', Times, serif;
+}
+h1, h2, h3, h4, h5, h6, .brand h1 {
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.tagline, .fst-italic {
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Brodie Roberts — CIS185 Portfolio</title>
+    <link rel="icon" type="image/png" href="R.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>𝐂𝐈𝐒 𝟏𝟖𝟓 𝐖𝐞𝐛𝐬𝐢𝐭𝐞</title>
+    <link rel="icon" type="image/png" href="https://purepng.com/public/uploads/large/purepng.com-earthnatureearthglobeplanetworld-9615246762347dzwa.png">
+    <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 40px; background: linear-gradient(135deg, #00ffff 0%, #ff00ff 100%); }
+    header { background: #ff00ff 100%; color: white; padding: 20px; text-align: center; border-radius: 6px; gap: 50px; margin-bottom: 28px; box-shadow: 0 0 0 5px rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif;}
+    main { background: white; padding: 20px; border-radius: 8px; }
+    footer { text-align: center; margin-top: 30px; color: #333; background: white; padding: 12px; border-radius: 6px; }
+    /* Interests as responsive flex cards */
+    .interests { display: flex; gap: 12px; flex-wrap: wrap; margin: 0; padding: 0; }
+    .interest-card { background: linear-gradient(70deg, #5e5e5e 0%, #222222 100%); padding: 12px 16px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); flex: 1 1 140px; text-align: center; font-weight: 600; color: white; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <h1>Brodie Roberts</h1>
+                <p class="tagline">Student • Aspiring Web Developer</p>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero container">
+            <div class="hero-text">
+                <h2>Hello — I'm Brodie</h2>
+                <p>I'm learning web development in CIS185. I enjoy building small projects and experimenting with HTML, CSS and JavaScript.</p>
+                
+            </div>
+            <div class="hero-image">
+                <img src="R.png" alt="Logo or avatar for Brodie" width="160" height="160">
+            </div>
+        </section>
+
+        <section id="about" class="container about">
+            <h2>About Me</h2>
+            <p>I am a student learning the fundamentals of web development. This page demonstrates semantic HTML5, responsive layout with Flexbox and Grid, a small form, and accessible content.</p>
+        </section>
+
+        <section id="projects" class="container projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <img src="R.png" alt="Screenshot of Project One">
+                    <h3>Project One</h3>
+                    <p>Short description of project one. Tech used: HTML, CSS.</p>
+                </article>
+                <article class="project-card">
+                    <img src="R.png" alt="Screenshot of Project Two">
+                    <h3>Project Two</h3>
+                    <p>Short description of project two. Tech used: JavaScript.</p>
+                </article>
+                <article class="project-card">
+                    <img src="R.png" alt="Screenshot of Project Three">
+                    <h3>Project Three</h3>
+                    <p>Short description of project three. Tech used: CSS Grid.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="container contact">
+            <h2>Contact</h2>
+            <form action="#" method="post" class="contact-form" aria-label="Contact form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2024 Brodie Roberts</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
