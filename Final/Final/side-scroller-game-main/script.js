@@ -15,14 +15,7 @@ input handler function.
 
 41:00 -- talks about collisions
 */
-window.addEventListener('keydown', function restartHandler(e) {
-  if (e.key.toLowerCase() === 'r') {
-    restartGame();
-    // Remove listener to prevent multiple restarts
-    window.removeEventListener('keydown', restartHandler);
-  }
-});
-
+// Wait for the DOM to load before adding the listener
 
 window.addEventListener('load', function () {
   const canvas = document.getElementById('canvas1');
@@ -32,6 +25,7 @@ window.addEventListener('load', function () {
   let score = 0;
   let enemies = [];
   let gameOver = false;
+  let devMode = false;
 
 function restartGame() {
   score = 0;
@@ -60,6 +54,11 @@ window.addEventListener('keydown', function restartHandler(e) {
     restartGame();
     // Remove listener to prevent multiple restarts
     window.removeEventListener('keydown', restartHandler);
+  }
+  if  (e.key.toLowerCase() === 'd') {
+    devMode = !devMode;
+
+    //window.removeEventListener('keydown', restartHandler);
   }
 });
 
@@ -118,6 +117,7 @@ window.addEventListener('keydown', function restartHandler(e) {
     }
 
     draw(context) {
+      if (devMode) {
       // NOTE: uncomment to draw a white box around the player (helpful for debugging)
       // context.fillStyle = 'white';
       // context.fillRect(this.x, this.y, this.width, this.height);
@@ -129,6 +129,7 @@ window.addEventListener('keydown', function restartHandler(e) {
       context.strokeStyle = "blue";
       context.arc(this.x + this.width/2, this.y+this.height/2, this.width/2, 0, Math.PI * 2);
       context.stroke();
+      }
       // sx through sh helps create a bounding box around a single pose of the character from the spritesheet.
       // check 15:00 min in video to see.
       let sx = this.frameX * this.width;
@@ -246,19 +247,20 @@ window.addEventListener('keydown', function restartHandler(e) {
       this.markedForDeletion = false;
     }
     draw(context) {
-      context.strokeStyle = 'white';
-      context.strokeRect(this.x, this.y, this.width, this.height);
+      if (devMode) {
+        context.strokeStyle = 'white';
+        context.strokeRect(this.x, this.y, this.width, this.height);
 
-      context.beginPath();
-      context.strokeStyle = "blue";
-      context.arc(this.x + this.width/2, this.y+this.height/2, this.width/2, 0, Math.PI * 2);
-      context.stroke();
+        context.beginPath();
+        context.strokeStyle = "blue";
+        context.arc(this.x + this.width/2, this.y+this.height/2, this.width/2, 0, Math.PI * 2);
+        context.stroke();
 
-      context.beginPath();
-      context.strokeStyle = 'red'
-      context.arc(this.x, this.y, this.width/2, 0, Math.PI * 2);
-      context.stroke();
-
+        context.beginPath();
+        context.strokeStyle = 'red'
+        context.arc(this.x, this.y, this.width/2, 0, Math.PI * 2);
+        context.stroke();
+      }
       // draw the enemy
       context.drawImage(this.image, this.frameX * this.width, 0,
         this.width, this.height, this.x, this.y, this.width, this.height);

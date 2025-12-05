@@ -112,3 +112,8 @@ body {
     .tooltip:hover::after {
       opacity: 1;
     }
+
+    .tooltip:active {
+      background: #540303;
+      color: #ff00ff;
+    }
