@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Valks Calendar — Converter</title>
+    <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.0772ca241634c7b01d851dbba01123ef?rik=JIDiotzXJVNrsQ&pid=ImgRaw&r=0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* small page-specific tweaks */
+        .result-card { min-height: 120px; }
+        .monospace { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; }
+    </style>
+</head>
+<body class="global-gradient">
+    <header class="container mt-3 mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent border border-white rounded-3 shadow-sm heavy-outline">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold brand-dark" href="index.html">Valks Calendar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCal" aria-controls="mainNavbarCal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbarCal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link btn btn-outline-light" href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="text-center text-white mt-2">
+            <span class="fst-italic">Student • Aspiring Web Developer</span>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="row g-3">
+            <div class="col-lg-6 col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Convert a Gregorian Date</h3>
+                        <p class="card-text">Enter a date (or use Today) to see the equivalent in the custom Valks calendar.</p>
+
+                        <div class="mb-3">
+                            <label for="gdate" class="form-label">Select a date</label>
+                            <input id="gdate" type="date" class="form-control" aria-label="Gregorian date input">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="countrySelect" class="form-label">Country for public holidays</label>
+                            <select id="countrySelect" class="form-select" aria-label="Country select for holidays">
+                                <option value="US" selected>United States (US)</option>
+                                <option value="GB">United Kingdom (GB)</option>
+                                <option value="CA">Canada (CA)</option>
+                                <option value="AU">Australia (AU)</option>
+                            </select>
+                            <div class="form-text">Select country to lookup public holidays (uses Nager.Date API).</div>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button id="btnConvert" class="btn btn-primary">Convert</button>
+                            <button id="btnToday" class="btn btn-outline-secondary">Today</button>
+                            <button id="btnSample" class="btn btn-outline-info">Sample: 1915-12-31</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="card shadow-sm result-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Valks Result</h5>
+                        <div id="result" class="pt-2">
+                            <p class="text-muted">No date selected yet.</p>
+                        </div>
+                        <hr>
+                        <div id="breakdown" class="small text-muted"></div>
+                        <div id="holidayInfo" class="mt-2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h6>Notes</h6>
+                        <ul>
+                            <li>The converter uses the project's <code>Calender_Math.js</code> function <code>gregorianToValks(year, month, day)</code>.</li>
+                            <li>The result is responsive and works on phones and tablets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-3 small text-muted">&copy; 2025 Brodie Roberts — Valks Calendar Demo</footer>
+
+    <script src="js/Calender_Math.js"></script>
+    <script src="js/valks_calendar_app.js"></script>
+    <script src="js/snow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

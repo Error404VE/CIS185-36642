@@ -1,0 +1,114 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg,
+    #ff00ff,
+    #00ffff,
+    #ff00ff,
+    #00ffff,
+    #ff00ff
+  );
+  background-size: 600% 600%;
+  background-attachment: fixed;
+  animation: gradientShift 18s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+#canvas1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+}
+
+#playerImage, #backgroundImage, #enemyImage {
+  display: none;
+}
+
+ .sidebar {
+      position: fixed;
+      top: 10;
+      right: 0;
+      width: 80px;
+      height: 93vh;
+      /* Fully transparent background */
+      background: transparent;
+      
+      /* White outline - you can adjust thickness */
+      border: 5px solid rgba(255, 255, 255, 0.8);
+      
+      /* Slight white inner glow for premium look */
+      box-shadow: 
+        0 0 15px rgba(255, 255, 255, 0.15),
+        inset 0 0 15px rgba(255, 255, 255, 0.05);
+      
+      border-radius: 16px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      /*box-shadow: -2px 0 10px rgba(0,0,0,0.2);*/
+      z-index: 1000;
+}
+
+    .sidebar-button {
+      width: 50px;
+      height: 50px;
+      margin: 10px 0;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sidebar.heavy-outline {
+    box-shadow: 0 0 0 5px #fff !important;
+    }
+
+    .sidebar-button:hover {
+      background-color: #2980b9;
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .tooltip {
+      position: relative;
+    }
+
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover::after {
+      opacity: 1;
+    }
